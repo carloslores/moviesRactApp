@@ -31,11 +31,16 @@ componentDidMount(){
     //this.state.movies.map(_=>console.log(_.title))
    console.log(this.state.movies.results)
        return(
-           <main>
+           <main className="container">
                <h1>Estamos en Popular movies</h1>
+                <div className="col-12">
+                <div className="row">
+               
                {
                  this.state.movies.length !== 0 ?  this.state.movies.results.map(movie=><MoviesCards key={movie.id} {...movie}/>) : null
                }
+               </div>
+               </div>
                
            </main>
        )
