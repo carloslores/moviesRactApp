@@ -1,4 +1,5 @@
 import axios from "axios"
+import API_KEY from "../configs"
 
 
 class Apiservice {
@@ -11,7 +12,7 @@ constructor(){
 }
 
 getPopularMovies =() =>{
-    return this.service.get("/3/movie/popular?api_key=2fa65f5723aae07b04e1fff6c02c71a4")
+    return this.service.get(`/3/movie/popular?api_key=${API_KEY}`)
     .then(response=>response.data)
     .catch(err=>console.log(err))
 }
