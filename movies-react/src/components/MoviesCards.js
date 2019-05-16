@@ -21,6 +21,7 @@ const styles = {
 
 
 const MoviesCards = movie => {
+  console.log(movie)
 const url = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   return(
       
