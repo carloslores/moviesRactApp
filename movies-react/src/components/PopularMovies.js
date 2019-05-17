@@ -1,11 +1,18 @@
 import React, {Component} from "react"
 import {connect} from "react-redux"
-import {popularMovies} from "../actions"
-import Apiservice from "../services/apiservice"
+import {
+    popularMovies,
+    // getMovie
+} from "../actions"
 import MoviesCards from "./MoviesCards"
 
 
 class PopularMovies extends Component{
+
+    // componentDidMount(){
+    //     const {movieId}= this.props.match.params
+    //     this.props.getMovie(movieId)
+    // }
 
     componentWillMount(){
         this.props.popularMovies() 
@@ -16,6 +23,10 @@ class PopularMovies extends Component{
         return this.props.movies.movies.map(movie=> <MoviesCards key={movie.id} {...movie}/>)
      
     }
+
+    // getMovie = movieId =>{
+    //     this.props.getMovie(movieId)
+    // }
 //   constructor(){
 //       super()
 //     this.state = {
@@ -69,5 +80,8 @@ function mapStateToProps(state){
       movies: state.movies 
     }
   }
+// const mapDispatchToPrtops = {
+//     getMovie
+// }
   
 export default connect(mapStateToProps, {popularMovies})(PopularMovies);

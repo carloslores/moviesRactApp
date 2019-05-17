@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from 'react-router-dom'
+
 import { withStyles } from '@material-ui/core/styles';
 
 import Card from '@material-ui/core/Card';
@@ -38,7 +40,7 @@ const url = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                     <Typography gutterBottom variant="h5" component="h2">
                         {movie.title}
                     </Typography>
-                  {/* <Link className="details" to={`/hamburger/${hamburger._id}`}> Detalles</Link> */}
+                  <Link className="details" to={`/movie/${movie.id}`}> Detalles</Link>
                 </CardContent>
                
             </CardActionArea>
