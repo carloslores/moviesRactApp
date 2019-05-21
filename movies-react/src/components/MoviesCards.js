@@ -23,7 +23,7 @@ const styles = {
 
 
 const MoviesCards = movie => {
-  console.log(movie)
+ // console.log(movie)
 const url = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   return(
       
@@ -40,7 +40,7 @@ const url = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
                     <Typography gutterBottom variant="h5" component="h2">
                         {movie.title}
                     </Typography>
-                  <Link className="details" to={`/movie/${movie.id}`}> Detalles</Link>
+                  <Link className="details" to={`/${movie.id}`}> Detalles</Link>
                 </CardContent>
                
             </CardActionArea>

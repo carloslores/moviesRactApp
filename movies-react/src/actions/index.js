@@ -14,10 +14,13 @@ export const popularMovies=()=>{
 }
 
 export const getMovie=(movieId)=>{
+
     return (dispatch, getState)=>{
-        axios.get(`https://api.themoviedb.org/3/movie/${movieId}api_key=${API_KEY}`)
+        axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`)
           .then(response=>{
-             dispatch({type:GET_MOVIE, payload: response.data.results})
+           
+              console.log(response.data)
+             dispatch({type:GET_MOVIE, payload: response.data})
           })
     }
 }

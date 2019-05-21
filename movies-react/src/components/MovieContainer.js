@@ -1,21 +1,27 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import {getMovie} from "../actions"
-import MovieDetils from "./MovieDetials"
+import MovieDetails from "./MovieDetials"
 
 class MovieContainer extends Component {
     componentDidMount() {
         const { movieId } = this.props.match.params
+        console.log(this.props.directors)
         this.props.getMovie(movieId)
     }
-
+    // componentDidUpdate(){
+    //     const { movieId } = this.props.match.params;
+    //     const { movie, actors, directors } = this.props;
+   
+    // }
 
     getMovie = movieId => {
         this.props.getMovie(movieId)
     }
   render(){
+      console.log(this.props.movie !== null? this.props.movie : null)
       return(
-          <MovieDetils movie={this.props.movie}/>
+          <MovieDetails movie={this.props.movie} directors={this.props.directors}/>
           
       )
   }
@@ -23,8 +29,14 @@ class MovieContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return state.movie
+    console.log(state.movie)
+    return {
+        movie: state.movie
+        
+    }
+  
 }
+
 const mapDispatchToProps = {
     getMovie
 }

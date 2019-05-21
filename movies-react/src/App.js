@@ -13,12 +13,13 @@ export default function App (){
 
   return (
     <div className="App">
-      
+      <React.Fragment>
       
      <Switch>
        <Route exact path="/" component={PopularMovies}/>
        <Route exact path="/:movieId" component={Movie}/>
      </Switch>
+     </React.Fragment>
     </div>
   );
 

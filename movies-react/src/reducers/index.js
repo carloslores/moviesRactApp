@@ -1,8 +1,9 @@
 import {combineReducers} from "redux"
-import {showPopularMovies} from "./movies"
+import {showPopularMovies, getOneMovie} from "./movies"
 
 const rootReducer = combineReducers({
-    movies: showPopularMovies
+    movies: showPopularMovies,
+    movie: getOneMovie
 })
 
 export default rootReducer 
