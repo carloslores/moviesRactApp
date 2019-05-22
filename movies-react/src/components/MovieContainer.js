@@ -6,7 +6,7 @@ import MovieDetails from "./MovieDetials"
 class MovieContainer extends Component {
     componentDidMount() {
         const { movieId } = this.props.match.params
-        console.log(this.props.directors)
+        console.log(this.props)
         this.props.getMovie(movieId)
     }
     // componentDidUpdate(){
