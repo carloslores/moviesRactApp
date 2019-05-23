@@ -6,7 +6,7 @@ import "mdbreact/dist/css/mdb.css";
 
 import PopularMovies from "./components/PopularMovies"
 import Movie from "./components/MovieContainer"
-import MovieDetails from "./components/MovieDetials"
+// import Actors from "./components/ActorsDetails"
 
 import './App.css';
 
@@ -20,6 +20,7 @@ export default function App (){
      <Switch>
        <Route exact path="/" component={PopularMovies}/>
        <Route exact path="/:movieId" component={Movie}/>
+       {/* <Route exact path="/:movieId/cast" component={Actors}/> */}
      </Switch>
      </React.Fragment>
     </div>

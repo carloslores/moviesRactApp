@@ -1,24 +1,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from 'react-router-dom'
+
+
+
+//import ActorsDetails from "./ActorsDetails"
 // import {connect} from "react-redux"
 // import {getMovie} from "../actions"
-import Rater from 'react-rater'
+
 
 
 
 
  const MovieDetails = ({movie, directors, actors, loading}) =>{
+     console.log(movie.movie !== null ? movie.movie.id: null)
      console.log(movie.movie !== null ? movie.movie.homepage: null)
+     console.log(actors.actors !== null ? actors.actors: null)
      console.log(actors.actors !== null ? actors.actors.cast.map(actor=>{
-       return actor.character
+       return `${actor.character} Play by: ${actor.name}`
         
         }) : null)
 
      //const url = `https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`
 
     return (
-        <main>
+        <main className="movie-details">
         {movie.movie !== null  
             ? 
             <div>
@@ -52,7 +58,10 @@ import Rater from 'react-rater'
     <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
   
     <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+  
+        {/* <Link to={`/${movie.movie.id}/cast`} render={<ActorsDetails actors={actors.actors}/>}>Cast</Link> */}
     <a href={movie.movie.homepage}> Movie homepage</a>
+    
 
   </div>
 
@@ -64,6 +73,67 @@ import Rater from 'react-rater'
 </div>
 
             :null}
+            <div className="col-12">
+            <div className="row">
+            <article className="col-12"> 
+
+
+<div className="card-container row">
+       
+                
+            {actors.actors !== null ? actors.actors.cast.map(actor=>{
+       return(
+        <div class="card actors-card">
+
+  
+  <div class="view overlay">
+    <img class="card-img-top" src={`https://image.tmdb.org/t/p/w1280${actor.profile_path}`} alt="Card image cap"/>
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+ 
+  
+
+
+  <div class="card-body">
+
+
+    <h4 class="card-title">{actor.name}</h4>
+    <hr/>
+ 
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+  </div>
+
+
+  
+
+</div>
+    //     {/* // <ul>
+    // //     <li key={actor.cast_id}>{actor.character} Play by: {actor.name}</li>
+    // // <img class="card-img-top" src={`https://image.tmdb.org/t/p/w1280${actor.profile_path}`} alt="Card image cap"/>
+       
+    // //     </ul> */}
+       )
+        
+        }) : null}
+               </div> 
+        {/* {actors.actors !== null ? actors.actors.cast.map(actor=>{
+       return( <ul>
+        <li key={actor.cast_id}>{actor.character} Play by: {actor.name}</li>
+    <img class="card-img-top" src={`https://image.tmdb.org/t/p/w1280${actor.profile_path}`} alt="Card image cap"/>
+       
+        </ul>
+       )
+        
+        }) : null} */}
+        
+
+</article>
+</div>
+</div>
         </main>
     )
 }

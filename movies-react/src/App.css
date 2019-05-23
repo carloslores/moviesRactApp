@@ -66,3 +66,16 @@
 .rate{
   display: inline;
 }
+.actors-card{
+  margin: 1%
+}
+.testimonial-card img{
+  height: 75%;
+  width: 50%;
+  margin-top:10px 
+}
+.movie-details{
+  background-color: #929fb9;
+  margin-top: 0px;
+  padding: 0px
+}
