@@ -1,6 +1,7 @@
 import {
     SHOW_POPULAR_MOVIES,
-    GET_MOVIE
+    GET_MOVIE,
+    GET_CAST
 } from "../actions"
 
 const initialSate = {
@@ -32,4 +33,14 @@ export function getOneMovie(state=initialSate,action){
         default:
         return state
     }
+}
+export function getCast(state=initialSate,action){
+    switch(action.type){
+        case GET_CAST:
+        console.log(action.payload)
+        return Object.assign({}, state, {actors: action.payload})
+        default:
+        return state
+    }
+
 }

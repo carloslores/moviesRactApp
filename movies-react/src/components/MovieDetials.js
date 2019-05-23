@@ -10,7 +10,10 @@ import Rater from 'react-rater'
 
  const MovieDetails = ({movie, directors, actors, loading}) =>{
      console.log(movie.movie !== null ? movie.movie.homepage: null)
-     console.log(directors)
+     console.log(actors.actors !== null ? actors.actors.cast.map(actor=>{
+       return actor.character
+        
+        }) : null)
 
      //const url = `https://image.tmdb.org/t/p/w500${movie.movie.poster_path}`
 
