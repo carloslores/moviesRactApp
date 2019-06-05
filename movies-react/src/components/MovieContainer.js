@@ -9,11 +9,7 @@ class MovieContainer extends Component {
         console.log(this.props.actors)
         this.props.getMovie(movieId)
     }
-    // componentDidUpdate(){
-    //     const { movieId } = this.props.match.params;
-    //     const { movie, actors, directors } = this.props;
-   
-    // }
+ 
 
     getMovie = movieId => {
         this.props.getMovie(movieId)

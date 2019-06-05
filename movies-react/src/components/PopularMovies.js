@@ -27,7 +27,7 @@ class PopularMovies extends Component{
        return(
            <main className="container">
                <h1>Estamos en Popular movies</h1>
-                <div className="col-12">
+                <div className="col-sm-10 col-md-6 col-lg-12">
                 <div className="row">
                
                {

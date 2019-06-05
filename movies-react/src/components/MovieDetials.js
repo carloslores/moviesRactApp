@@ -82,12 +82,18 @@ import { Link } from 'react-router-dom'
        
                 
             {actors.actors !== null ? actors.actors.cast.map(actor=>{
+              console.log(actor.profile_path)
        return(
+         
         <div class="card actors-card">
 
   
   <div class="view overlay">
-    <img class="card-img-top" src={`https://image.tmdb.org/t/p/w1280${actor.profile_path}`} alt="Card image cap"/>
+    {actor.profile_path !== null 
+      ? <img class="card-img-top" src={`https://image.tmdb.org/t/p/w1280${actor.profile_path}`} alt="Card image cap"/> 
+      :
+      <img class="default-img" src="https://www.dhresource.com/0x0s/f2-albu-g7-M01-C7-B4-rBVaSVvtHdWAAz_TAAMeNwIX8Bw862.jpg/ropa-para-mascotas-cosplay-pirata-perros.jpg" alt="Card image cap"/>
+      }
     <a>
       <div class="mask rgba-white-slight"></div>
     </a>
@@ -97,13 +103,13 @@ import { Link } from 'react-router-dom'
   
 
 
-  <div class="card-body">
+  <div class="card-body body-actor">
 
 
     <h4 class="card-title">{actor.name}</h4>
     <hr/>
  
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h6>As: {actor.character}</h6>
 
   </div>
 
