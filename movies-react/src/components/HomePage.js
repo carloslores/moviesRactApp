@@ -13,7 +13,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
       }
     renderPopularMovies(){
         let mov = this.props.movies.movies
-        console.log(mov)
+        // console.log(mov)
         let random = Math.floor(Math.random() * (19 - 0)) + 0
         for(let i = 0; i < mov.length; i++){
             if(mov.length !== 0 && mov.indexOf(mov[i]) === random)
@@ -37,19 +37,20 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
         {this.renderPopularMovies() === "https://wallpapercave.com/wp/wp3891853.jpg" ? 
         <MDBView src="https://wallpapercave.com/wp/wp3891853.jpg">
         <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
-          <h2>This Navbar is fixed</h2>
+          {/* <h2>This Navbar is fixed</h2>
           <h5>It will always stay visible on the top, even when you scroll down</h5>
           <p>Navbar's background will switch from transparent to solid color while scrolling down</p><br />
-          <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+          <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p> */}
         </MDBMask>
       </MDBView>
       :
       <MDBView src={`${url}${this.renderPopularMovies()}`}>
+      
       <MDBMask overlay="purple-light" className="flex-center flex-column text-white text-center">
-        <h2>This Navbar is fixed</h2>
+        {/* <h2>This Navbar is fixed</h2>
         <h5>It will always stay visible on the top, even when you scroll down</h5>
         <p>Navbar's background will switch from transparent to solid color while scrolling down</p><br />
-        <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+        <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p> */}
       </MDBMask>
     </MDBView>
       }

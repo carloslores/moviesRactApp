@@ -87,64 +87,7 @@
 }
 
 
-/* Navbar-------------------------------- */
-#navBar3 {
-  background: #22313F;
-  border: 0;
-  margin-top:0px;
-  top: 280px;
-  /*Rmove this "top: 280px;" its only to display more than one header with vertical spaces*/
-}
-#navBar3 .navbar-brand {
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-}
-#navBar3 .navbar-nav li a {
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-}
-#navBar3 .navbar-nav li:nth-child(odd) {
-  background: #283949;
-}
-#navBar3 .navbar-nav li:nth-child(odd)::after {
-  content: '';
-  border-left: 55px solid #283949;
-  border-top: 0 solid #283949;
-  border-bottom: 10px solid transparent;
-  position: absolute;
-  z-index: 99999;
-  bottom: -10px;
-}
-#navBar3 .navbar-nav li:nth-child(odd)::before {
-  content: '';
-  border-left: 55px solid #283949;
-  border-bottom: 0 solid #283949;
-  border-top: 10px solid transparent;
-  position: absolute;
-  z-index: 99999;
-  top: -10px;
-}
-#navBar3 .navbar-nav li:nth-child(even) {
-  background: #22313F;
-}
-#navBar3 .navbar-nav li:nth-child(even)::after {
-  content: '';
-  border-right: 55px solid #22313F;
-  border-top: 0 solid #22313F;
-  border-bottom: 10px solid transparent;
-  position: absolute;
-  z-index: 99999;
-  bottom: -10px;
-  right: 0;
-}
-#navBar3 .navbar-nav li:nth-child(even)::before {
-  content: '';
-  border-right: 55px solid #22313F;
-  border-bottom: 0 solid #22313F;
-  border-top: 10px solid transparent;
-  position: absolute;
-  z-index: 99999;
-  top: -10px;
-  right: 0;
+.mdb-logo{
+  width: 7%;
+  margin: 5px 
 }
